@@ -30,17 +30,17 @@ png(filename =  "plot4.png")
 # Set our 2x2 plot layout
 par(mfrow = c(2,2))
 
-### PLOT 1 ###
+### PLOT 1 - Will end up top left###
 # Build our empty plot first
 with(twoDays, plot(datetime, Global_active_power, 
                    type = "l",
                    ylab = "Global Active Power",
                    xlab = ""))
 
-### PLOT 2 ###
+### PLOT 2 - Will end up top right ###
 with(twoDays, plot(datetime, Voltage, type = "l"))
 
-### PLOT 3 ###
+### PLOT 3 - Will end up bottom left ###
 with(twoDays, plot(datetime,
                    Sub_metering_1,
                    col = "black",
@@ -57,7 +57,8 @@ legend("topright",
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        lty = c(1, 1, 1),
        col = c("black", "blue", "red"))
-### PLOT 4 ###
+
+### PLOT 4  - Will end up bottom right ###
 with(twoDays, plot(datetime, Global_reactive_power, type = "l"))
 
 # Close the file
